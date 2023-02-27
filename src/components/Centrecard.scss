@@ -1,0 +1,65 @@
+.cardcontainer{
+    margin: 20px auto;
+    width: 500px;
+    background-color: aliceblue;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+    .cardhead{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        img{
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+        }
+        h2{
+            font-size: 30px;
+        }
+    }
+    .postimg{
+        max-width: 480px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    .description{
+        width: 400px;
+        font-size: 18px;
+        margin: 20px 0px;
+    }
+    .commentsbox{
+        width: 80%;
+        h3{
+            font-size: 24px;
+            margin-bottom: 10px;
+            align-self:center;
+        }
+        span{
+            padding: 20px;
+            font-size: 15px;
+        }
+        .commenthere{
+            display: flex;
+            align-items: center;
+            i{
+                font-size: 25px;
+            }
+            input{
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+                height: 20px;
+                border: 2px solid black;
+                outline: none;
+                font-size: 15px;
+                padding: 5px;
+                border-radius: 10px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 80px;
+    margin: 0px auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue ;
+    color: rgb(124, 124, 124);
+    .left{
+        font-size: 40px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .center{
+        display: flex;
+        gap: 10px;      
+        font-size: 18px;
+        align-items: center;
+        font-weight: 500;
+        cursor: pointer;
+        span{
+            padding: 10px 20px;
+            border-radius: 15px;
+            i{
+                padding: 0px 5px 0px 0px;
+                font-size: 20px;
+            }
+        }
+        :hover{
+            color: rgb(0, 115, 255);
+            background-color: rgb(226, 245, 255);
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        input{
+            height: 30px;
+            margin: 10px;
+            width: 200px;
+            border: 3px solid rgb(124, 124, 124);
+            outline: none;
+            border-radius: 10px;
+            padding: 0px 10px;
+        }
+        button{
+            height: 36px;
+            font-size: 20px;
+            border: 3px solid rgb(124, 124, 124);
+            border-radius: 10px;
+            padding: 0px 10px;
+            cursor: pointer;
+            color: rgb(124, 124, 124);
+            background-color: white;
+
+            
+        }
+    }
+}

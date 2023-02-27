@@ -1,0 +1,30 @@
+.sidecontainer{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: aliceblue;
+    padding: 20px 40px;
+    // margin: 20px 40px;
+    border-radius: 15px;
+    gap: 5px;
+    color: rgb(124, 124, 124);
+
+    span{
+        display: flex;
+        background-color: aliceblue;
+        padding: 10px;
+        justify-content: left;
+        border-radius:10px;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+        i{
+            padding: 0px 10px 0px 0px;
+            font-size: 20px;
+        }
+    }
+    :hover{
+        color: rgb(0, 115, 255);
+        background-color: rgb(226, 245, 255);
+    }
+}
