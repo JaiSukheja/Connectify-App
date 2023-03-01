@@ -1,0 +1,64 @@
+.signin{
+    margin: 20px auto;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    
+    h1{
+        font-size: 50px;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 200;
+        font-style: italic;
+    }
+    .inputdiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto;
+        gap: 20px;
+        input{
+            height: 20px;
+            width: 280px;
+            border: none;
+            border-bottom: 2px solid gray ;
+            outline: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 15px;
+            background-color: rgb(252, 252, 252) ;
+        }
+        button{
+            width: 200px;
+            font-size: 18px;
+            background-color: rgba(0, 110, 255, 0.785);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 20px 20px 15px;
+            cursor: pointer;
+        }
+    }
+}
+.exists{
+    margin: 20px auto;
+    background-color: aliceblue;
+    width: 400px;
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 17px;
+    color: gray;
+    .link{
+        text-decoration: none;
+        color: rgb(0, 140, 255);
+    }
+}

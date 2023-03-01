@@ -4,10 +4,12 @@ import Navbar from '../components/Navbar'
 import Profilebox from '../components/Profilebox'
 import Sidebar from '../components/Sidebar'
 import SideFooter from '../components/SideFooter'
-import './Main.scss'
-const Main = () => {
+import './Home.scss'
+import '../components/gradient.scss'
+
+const Home = () => {
   return (
-    <div className='main'>
+    <div className='home'>
       <div className='navbardiv'>
         <Navbar/>
       </div>
@@ -29,4 +31,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Home

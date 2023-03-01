@@ -1,10 +1,9 @@
-.main{
+.home{
     display: grid;
     grid-template-columns: 22% 56% 22%;
     grid-template-areas: 
     "nav nav nav"
-    "sidebar centre sidefooter";
-    background-color: rgb(226, 244, 253);
+    "sidebar centre sidefooter";    
     .navbardiv{
         width: 100%;
         grid-area: nav;

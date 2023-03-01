@@ -1,0 +1,40 @@
+.grad{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+}
+.gradc{
+    background: linear-gradient(37deg, #ff5555, #cc64ff, #6484ff, #2cf9e7, #e6ff8c, #ffcc8c, #ff5f5f);
+    background-size: 1400% 1400%;
+
+    -webkit-animation: AnimationName 0s ease infinite;
+    -moz-animation: AnimationName 0s ease infinite;
+    animation: AnimationName 0s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0%{background-position:29% 0%}
+        50%{background-position:72% 100%}
+        100%{background-position:29% 0%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:29% 0%}
+        50%{background-position:72% 100%}
+        100%{background-position:29% 0%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:29% 0%}
+        50%{background-position:72% 100%}
+        100%{background-position:29% 0%}
+    }
+}
