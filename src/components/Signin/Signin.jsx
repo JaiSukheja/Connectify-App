@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Link,useNavigate} from 'react-router-dom'
-import Connectify from './Connectify'
+import Connectify from '../other/Connectify'
 import './Signin.scss'
 const Signin = () => {
   const Navigate = useNavigate();

@@ -1,11 +1,10 @@
 import React from 'react'
-import Centrecard from '../components/Centrecard'
-import Navbar from '../components/Navbar'
-import Profilebox from '../components/Profilebox'
-import Sidebar from '../components/Sidebar'
-import SideFooter from '../components/SideFooter'
+import Centrecard from '../components/Centercard/Centrecard'
+import Navbar from '../components/Navbar/Navbar'
+import Profilebox from '../components/Profilebox/Profilebox'
+import Sidebar from '../components/Sidebar/Sidebar'
+import SideFooter from '../components/SideFooter/SideFooter'
 import './Home.scss'
-import '../components/gradient.scss'
 
 const Home = () => {
   return (

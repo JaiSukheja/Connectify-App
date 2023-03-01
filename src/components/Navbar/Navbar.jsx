@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.scss'
-import './link.scss'
+import '../other/link.scss'
 const Navbar = () => {
   return (
     <div>

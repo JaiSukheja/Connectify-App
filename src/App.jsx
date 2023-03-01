@@ -1,8 +1,8 @@
 import React from "react"
-import CreatePost from "./components/CreatePost"
-import Profile from "./components/Profile"
-import Signin from "./components/Signin"
-import Signup from "./components/Signup"
+import CreatePost from "./components/CreatePost/CreatePost"
+import Profile from "./components/Profile/Profile"
+import Signin from "./components/Signin/Signin"
+import Signup from "./components/Signup/Signup"
 import Home from "./pages/Home"
 import {  createBrowserRouter,  RouterProvider, Outlet} from "react-router-dom";
 import Landing from "./pages/Landing"

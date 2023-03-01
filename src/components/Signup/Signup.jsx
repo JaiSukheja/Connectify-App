@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {Link,useNavigate} from 'react-router-dom'
-import Connectify from './Connectify'
+import Connectify from '../other/Connectify'
+import M from 'materialize-css'
 import './Signup.scss'
 const Signup = () => {
   // we will use hooks to set the password name
