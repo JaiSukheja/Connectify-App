@@ -1,0 +1,20 @@
+.online{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    h1{
+        align-items: center;
+        font-size: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 5px 20px;
+        background-color: aliceblue;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+}

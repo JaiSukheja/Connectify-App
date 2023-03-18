@@ -23,8 +23,10 @@
     }
     .postimg{
         max-width: 480px;
+        max-height: 600px;
         border-radius: 15px;
         margin-bottom: 20px;
+        object-fit: contain;
     }
     .title{
         font-weight: 500;
@@ -40,13 +42,20 @@
         font-size: 18px;
         margin: 20px 0px;
     }
+    h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin-left: 50px;
+        &:hover{
+            background-color: rgb(211, 240, 251);
+        }
+        align-self: start;
+    }
     .commentsbox{
         width: 80%;
-        h3{
-            font-size: 24px;
-            margin-bottom: 10px;
-            align-self:center;
-        }
         span{
             padding: 20px;
             font-size: 15px;
@@ -71,5 +80,8 @@
                 
             }
         }
+    }
+    .hidecomments{
+        display: none;
     }
 }

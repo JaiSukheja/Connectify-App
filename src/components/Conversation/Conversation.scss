@@ -1,0 +1,48 @@
+.conversation{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    .chatbox{
+        height: 60vh;
+        padding: 10px;
+        background: linear-gradient(rgba(7, 7, 7, 0.537),rgba(0, 0, 0, 0.756)), url("https://t3.ftcdn.net/jpg/02/23/24/00/360_F_223240002_6GAvK9B0uB4v5wGIkEiAUAOun4C4hwGd.jpg");
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .messagecontent{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        textarea{
+            flex: 5;
+            padding: 10px;
+            border: 2px solid black;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            height: 25px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+        button{
+            flex: 1;
+            background-color: rgba(0, 208, 83, 0.697);
+            border: none;
+            border-radius: 15px;
+            font-size: 22px;
+            padding: 5px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+}

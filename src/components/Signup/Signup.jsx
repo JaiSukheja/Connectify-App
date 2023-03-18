@@ -1,84 +1,75 @@
-import React, { useState } from "react";
-import {Link,useNavigate} from 'react-router-dom'
+import React, { useRef } from "react";
+import {Link} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import Connectify from '../other/Connectify'
 import M from 'materialize-css'
 import './Signup.scss'
 const Signup = () => {
-  // we will use hooks to set the password name
-  const Navigate = useNavigate();
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [username,SetUsername] = useState("");
-
-//   if we will directly fetch then it will give CORS as react prevents the app to fetch directly
-// from the another port 
-  const signupdata = ()=>{
-    // fetching the data
-    // The Fetch API provides a JavaScript interface for accessing 
-    // and manipulating parts of the protocol, such as requests and responses. 
-    // It also provides a global fetch() method that provides an easy, 
-    // logical way to fetch resources asynchronously across the network.
-    if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
-        M.toast({html:"invalid email",classes:"#e53935 red darken-1"})
-        return;
-    }
-    fetch('/signup',{
-        method:"post",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-            name,
-            password,
-            email,
-            username
-        })
-    }).then(res=>res.json())
-    .then(data=>{
-        if(data.error){
-            M.toast({html:data.error,classes:"#e53935 red darken-1"})
+    const navigateTo = useNavigate();
+    const email = useRef();
+    const username = useRef();
+    const password = useRef();
+    const confirmPassword = useRef();
+    const handleClick = (e)=>{
+      e.preventDefault();
+      if(password.current.value !== confirmPassword.current.value){
+        console.log(password.current.value ,confirmPassword.current.value)
+        confirmPassword.current.setCustomValidity("Password don't match!")
+      }else{
+        const user = {
+          username: username.current.value,
+          email: email.current.value,
+          password: password.current.value,
         }
-        else{
-            M.toast({html:data.message,classes:"#00c853 green accent-4"})
-            Navigate('/signin')
+        let fetchdata = async ()=>{
+          try{
+            let response= await fetch("http://localhost:4444/api/auth/signup", {
+              method: "POST",
+              mode: "cors",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(user),
+            })
+            const data = await response.json();
+            // console.log(data);
+            navigateTo('/')
+          }catch(err){
+            console.log(err)
+          }
         }
-    })
+        fetchdata();
 
-    
-  }
+      }
+    };
   return (
     <div>
       <Connectify/>
         <div className="signup">
             <h1>Signup</h1>
-            <div className='inputdiv'>
+            <form className='inputdiv' onSubmit={handleClick}>
+                <input type="email"
+                  required
+                  placeholder="Email"
+                  ref={email}
+                  />
                 <input type="text"
-                  name="email"
-                  id="takingInput"
-                  placeholder="Mobile Number or Email"
-                  value={email}
-                  onChange={(e)=>setEmail(e.target.value)}/>
-                <input type="text"
-                  name="name"
-                  id="takingInput"
-                  placeholder="Full Name"
-                  value={name}
-                  onChange={(e)=>setName(e.target.value)}/>
-                <input type="text"
-                  name="username"
-                  id="takingInput"
+                  required
                   placeholder="Username"
-                  value={username}
-                  onChange={(e)=>SetUsername(e.target.value)}/>
-                <input type="Password"
-                  name="password"
-                  id="takingInput"
+                  ref={username}
+                  />
+                <input type="password"
+                  required
                   placeholder="Password"
-                  value={password}
-                  onChange={(e)=>setPassword(e.target.value)}/>
-                <button onClick={()=>signupdata()}>Sign up</button>
-            </div>
+                  ref={password}
+                  />
+                <input type="Password"
+                  required
+                  placeholder=" Confirm Password"
+                  ref={confirmPassword}
+                  />
+                <button type="submit">Sign up</button>
+            </form>
         </div>
         <div className="exists">
             <span>Already Have an Account </span>
@@ -89,3 +80,32 @@ const Signup = () => {
 }
 
 export default Signup
+
+
+
+// const Navigate = useNavigate();
+//     const [name, setName] = useState("");
+//     const [password, setPassword] = useState("");
+//     const [email, setEmail] = useState("");
+//     const [username,SetUsername] = useState("");
+//     let fetchdata = async ()=>{
+//       try{
+//         let response= await fetch("http://localhost:4444/api/auth/signup", {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify({
+//             username,
+//             name,
+//             email,
+//             password
+//           }),
+//         })
+//         const data = await response.json();
+//         console.log(data)
+//       }catch(err){
+//         console.log(err)
+//       }
+//     }
+    

@@ -1,0 +1,47 @@
+.friendList{
+    width: 20vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    // height: calc(100vh - 100px);
+    h1{
+        align-items: center;
+        font-size: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 5px 20px;
+        background-color: aliceblue;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .find{
+        background-color: aliceblue;
+        padding: 5px 10px;
+        border-radius: 15px;
+        display: flex;
+        input{
+            padding: 5px;
+            font-size: 15px;
+            border: none;
+            background-color: transparent;
+            flex: 4;
+            border-radius: 15px;
+            outline: none;
+
+        }
+        button{
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 15px;
+
+        }
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,36 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, Navigate } from 'react-router-dom'
 import './Navbar.scss'
 import '../other/link.scss'
+import { AuthContext } from '../../context/AuthContext'
 const Navbar = () => {
+    const userDetails = JSON.parse(localStorage.getItem("user"))
   return (
     <div>
         <div className="container">
-            <Link to="/home" className='link'>
-                <div className="left">
-                    Connectify
-                </div>
-            </Link>
+            <div className="left">
+                <Link to="/" className='logolink'>
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/191/989/non_2x/circle-logo-png.png" alt="" className='logo' />
+                    <span>Connectify</span>
+                </Link>
+            </div>
             <div className="center">
-                <Link to="/home" className='link'>
-                    <span><i class="fa-sharp fa-solid fa-house"></i> Home</span>
+                <Link to="/" className='link'>
+                    <span><i className="fa-sharp fa-solid fa-house"></i> Home</span>
                 </Link>
                 <Link to="/createpost" className='link'>
-                    <span><i class="fa-sharp fa-solid fa-square-plus"></i> Create Post</span>
+                    <span><i className="fa-sharp fa-solid fa-square-plus"></i> Create Post</span>
                 </Link>
-                <Link to="/profile" className='link'>
-                    <span><i class="fa-solid fa-user"></i> Profile</span>
+                <Link to="/message" className='link'>
+                    <span><i className="fa-sharp fa-solid fa-square-plus"></i> Message</span>
                 </Link>
-                <Link to="/signin" className='link'>
-                    <span><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</span>
-                </Link>
-                {/* <Link to="/profile">
-                    <span><i class="fa-solid fa-video"></i> Video</span>
-                </Link> */}
             </div>
             <div className="right">
-                <input type="text"  placeholder='Search'/>
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                {userDetails && <Link to="/profile" >
+                    <span className='link'><img src={userDetails.profilePicture ? userDetails.profilePicture : "https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png"} alt="" /> {userDetails.username}</span>
+                </Link>}
+                <Link onClick={()=>{localStorage.clear(); Navigate('/')}} >
+                    <span className='link'><i className="fa-solid fa-arrow-right-from-bracket"></i> Logout</span>
+                </Link>
             </div>
         </div>
     </div>
@@ -38,3 +39,6 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+/* <input type="text"  placeholder='Search'/>
+<button><i className="fa-solid fa-magnifying-glass"></i></button> */

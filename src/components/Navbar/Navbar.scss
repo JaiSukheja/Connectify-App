@@ -1,62 +1,89 @@
 .container{
     display: flex;
-    justify-content: space-between;
-    padding: 15px 80px;
+    justify-content:space-between;
+    padding: 10px 80px;
+    align-items: center;
+    height: 60px;
     margin: 0px auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: aliceblue ;
-    color: rgb(124, 124, 124);
+    // .logolink{
+        
+    // }
     .link{
-        color: gray;
+        color: rgb(255, 150, 150);
+    }
+    a{
+        text-decoration: none;
     }
     .left{
-        font-size: 40px;
-        font-weight: 600;
-        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        .logolink{
+            color: rgb(255, 150, 150);
+            text-decoration: none;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            img{
+                height: 60px;
+                width: 60px;
+                border-radius: 15px;
+                // background-color: rgba(0, 0, 0, 0.215);
+            }
+            span{
+                font-size: 40px;
+                font-weight: 500;
+            }
+        }
     }
     .center{
         display: flex;
-        gap: 10px;      
-        font-size: 18px;
         align-items: center;
-        font-weight: 500;
-        cursor: pointer;
-        span{
-            padding: 10px 20px;
+        font-size: 24px;
+        gap: 40px;
+        .link{
             border-radius: 15px;
-            i{
-                padding: 0px 5px 0px 0px;
-                font-size: 20px;
+            padding: 10px 5px;
+
+            &:hover{
+                color: rgb(254, 118, 118);
+                background-color: rgb(226, 245, 255)!important;
             }
-        }
-        :hover{
-            color: rgb(0, 115, 255);
-            background-color: rgb(226, 245, 255);
         }
     }
     .right{
         display: flex;
         align-items: center;
-        input{
-            height: 30px;
-            margin: 10px;
-            width: 200px;
-            border: 3px solid rgb(124, 124, 124);
-            outline: none;
-            border-radius: 10px;
-            padding: 0px 10px;
-        }
-        button{
-            height: 36px;
-            font-size: 20px;
-            border: 3px solid rgb(124, 124, 124);
-            border-radius: 10px;
-            padding: 0px 10px;
-            cursor: pointer;
-            color: rgb(124, 124, 124);
-            background-color: white;
-
-            
+        font-size: 24px;
+        gap: 40px;
+        font-weight: 400;
+        
+        .link{
+            display: flex;
+            gap: 10px;
+            text-transform: capitalize;
+            border-radius: 15px;
+            padding: 10px 5px;
+            align-items: center;
+            i{
+                font-size: 25px;
+                margin-right: 5px;
+            }
+            img{
+                width: 40px;
+                height: 40px;
+                border-radius: 15px;
+                object-fit: cover;
+                // border: 2px solid rgb(254, 118, 118);
+                background-color: rgb(110, 176, 252);
+            }
+            &:hover{
+                color: rgb(254, 118, 118);
+                background-color: rgb(226, 245, 255)!important;
+            }
         }
     }
 }

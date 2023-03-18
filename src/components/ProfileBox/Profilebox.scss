@@ -29,8 +29,10 @@
     }
     h2{
         margin: 5px;
+        text-transform: capitalize;
     }
-    button{
+    .myprofile{
+        text-decoration: none;
         font-size: 18px;
         background-color: rgb(0, 110, 255);
         border: none;

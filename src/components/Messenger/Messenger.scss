@@ -1,0 +1,17 @@
+.messenger{
+    display: flex;
+    justify-content: space-between;
+    // background-color: antiquewhite;
+    .left{
+        flex: 2.5;
+        align-items: center;
+    }
+    .center{
+        flex: 5;
+        align-items: center;
+
+    }
+    .right{
+        flex: 2.5;
+    }
+}

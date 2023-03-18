@@ -1,0 +1,30 @@
+.friend{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+    img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: black;
+    }
+    span{
+        font-size: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .onlinebadge{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: limegreen;
+        top: 10px;
+        left: 50px;
+    }
+}

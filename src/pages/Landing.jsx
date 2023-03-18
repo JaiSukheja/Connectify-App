@@ -1,10 +1,10 @@
 import React from 'react'
-import Signup from '../components/Signup/Signup'
+import Signin from '../components/Signin/Signin'
 import './Landing.scss'
 const Landing = () => {
   return (
     <div>
-        <Signup/>
+        <Signin/>
     </div>
   )
 }
