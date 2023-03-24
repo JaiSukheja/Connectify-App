@@ -1,0 +1,75 @@
+.newsBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 5px;
+    color: rgb(124, 124, 124);
+    justify-content: center;
+    h1{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+        padding: 10px;
+    }
+    .allnews{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        .news{
+            display: flex;
+            // border: 4px solid rgb(102, 101, 101);
+            border-radius: 15px;
+            flex-direction: column;
+            width: 180px;
+            gap: 5px;
+            background-color: rgb(233, 233, 253);
+            .img{
+                width: 180px;
+                height: 150px;
+                margin: 0 auto;
+                img{
+                    width: 180px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 15px 15px 0px 0px ;
+                }
+            }
+            .content{
+                display: flex;
+                justify-content: center;
+                font-size: smaller;
+                height: 50px;
+                overflow-y: hidden;
+                font-weight: 500;
+                padding: 10px;
+                padding-bottom: 0px ;
+
+            }
+            a{
+                text-decoration: none;
+                display: flex;
+                text-align: center;
+                padding: 0px 10px;
+                font-size: smaller;
+                overflow-y: hidden;
+                font-weight: 500;
+                padding-bottom: 0px ;
+                color: rgb(84, 102, 118);
+                padding-bottom: 5px;
+                justify-content: center;
+                &:hover{
+                    color: rgb(0, 166, 255);
+                }
+            }
+            .author{
+                font-weight: 800;
+                color: rgb(102, 102, 102);
+                padding: 0px 10px;
+            }
+        }
+    }
+}

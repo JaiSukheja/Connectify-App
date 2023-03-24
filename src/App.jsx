@@ -6,7 +6,6 @@ import Signup from "./components/Signup/Signup"
 import Home from "./pages/Home"
 import { Navigate } from 'react-router';
 import {  createBrowserRouter,  RouterProvider, Outlet} from "react-router-dom";
-import Landing from "./pages/Landing"
 import Messenger from "./components/Messenger/Messenger"
 import { AuthContext } from "./context/AuthContext"
 function App() {

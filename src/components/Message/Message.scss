@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 10px;    
-    max-width: 70%;
+    max-width: 600px;
     .messagehead{
         min-width: none;
         .messageimg{
@@ -19,7 +19,9 @@
             border-radius: 15px;
             background-color: #dcccfd;
             min-width: none;
+            max-width: 100%;
             font-size: 18px;
+            font-weight: 500;
         }
 
     }
@@ -35,5 +37,8 @@
     .messagetext{
         background-color: rgb(196, 252, 252) !important;
         color: black;
+    }
+    .messagefoot{
+        text-align: right;
     }
 }

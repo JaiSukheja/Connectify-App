@@ -28,9 +28,7 @@ const CreatePost = () => {
             },
             body: JSON.stringify(post),
           })
-          const data = await response.json();
-          console.log(data);
-          navigateTo('/')
+          // const data = await response.json();
         }catch(err){
           console.log(err)
         }

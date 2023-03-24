@@ -19,7 +19,7 @@ const Home = () => {
           },
         }).then((response) => response.json())
         .then((data) => {
-          setData(data)
+          setData(data.reverse())
           // console.log("Success:", data);
         })
         .catch((error) => {
@@ -41,9 +41,9 @@ const Home = () => {
         <Sidebar/>
       </div>
       <div className='centrediv'>
-        {data.map((dataValue)=>{
+        {data?.map((dataValue)=>{
           // console.log(dataValue.userId)
-          return <Centrecard title={dataValue.title} img={dataValue.img} body={dataValue.body} userId={dataValue.userId} key={dataValue._id}/>
+          return <Centrecard title={dataValue.title} img={dataValue.img} body={dataValue.body} userId={dataValue.userId} postId={dataValue._id} key={dataValue._id}/>
         })}
         
       </div>

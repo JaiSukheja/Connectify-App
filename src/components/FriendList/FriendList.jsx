@@ -3,7 +3,7 @@ import { AuthContext } from '../../context/AuthContext'
 import Friend from '../Friend/Friend'
 import './FriendList.scss'
 const FriendList = () => {
-
+  const [currentChat,setCurrentChat]=useState(null)
   const [friends, setfriends]= useState([]);
   const { user } = useContext(AuthContext);
   useEffect(()=>{
@@ -43,7 +43,10 @@ const FriendList = () => {
         { friends.map((f)=>{
           // console.log(f);
           // console.log(f.members)
-          return <Friend members={f.members} currentUser={user} key = {f._id}/>
+          return(
+            <div onClick={()=>{setCurrentChat(f)}}>
+              <Friend members={f.members} currentUser={user} key = {f._id} />
+            </div>)
          })}
 
       </div>      

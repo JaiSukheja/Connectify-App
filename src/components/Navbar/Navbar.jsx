@@ -22,7 +22,13 @@ const Navbar = () => {
                     <span><i className="fa-sharp fa-solid fa-square-plus"></i> Create Post</span>
                 </Link>
                 <Link to="/message" className='link'>
-                    <span><i className="fa-sharp fa-solid fa-square-plus"></i> Message</span>
+                    <span><i class="fa-solid fa-envelope"></i> Message</span>
+                </Link>
+                <Link to="/" className='link'>
+                    <span><i className="fa-solid fa-bell"></i></span>
+                </Link>
+                <Link to="/" className='link'>
+                    <span><i class="fa-solid fa-message"></i></span>
                 </Link>
             </div>
             <div className="right">

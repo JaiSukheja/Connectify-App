@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Friend.scss'
 
 
-const Friend = ({members, currentUser}) => {
+const Friend = ({members, currentUser,show}) => {
 //   useEffect(()=>{
 //     console.log(props)
 //   },[props])
@@ -37,7 +37,7 @@ const Friend = ({members, currentUser}) => {
 
   return (
     <div className='friend'>
-      <img src="" alt="" />
+      {user && <img src={user.profilePicture} alt="" />}
       {user && <span className='name'>{user.username}</span>}
       {/* <div className={show ? 'onlinebadge' : '' }></div> */}
     </div>
